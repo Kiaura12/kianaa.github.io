@@ -1,0 +1,227 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* เมนูนำทาง */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* ส่วนแบนเนอร์ */
+.banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-text {
+    text-align: center;
+    color: #fff;
+}
+
+.banner-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.banner-text p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.banner-text .btn {
+    text-decoration: none;
+    background: #f4f4f4;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.banner-text .btn:hover {
+    background: #ddd;
+}
+
+/* ส่วนเกี่ยวกับเรา */
+.about, .services, .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2, .services h2, .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ส่วนบริการ */
+.services .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services .service-box {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.services .service-box i {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.services .service-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.services .service-box p {
+    font-size: 16px;
+}
+
+/* ส่วนติดต่อเรา */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 15px 30px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #555;
+}
+
+/* ส่วนท้ายเว็บไซต์ */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+}
+
+footer .social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+footer .social a:hover {
+    color: #ddd;
+}
+
+/* การตอบสนองสำหรับอุปกรณ์มือถือ */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 200px;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .services .service-container {
+        flex-direction: column;
+    }
+
+    .banner-text h1 {
+        font-size: 36px;
+    }
+
+    .banner-text p {
+        font-size: 18px;
+    }
+}
