@@ -1,4 +1,4 @@
-// ฟังก์ชันสำหรับเมนูนำทางบนมือถือ
+//ฟังก์ชันสำหรับเมนูนำทางบนมือถือ
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('nav ul');
 
