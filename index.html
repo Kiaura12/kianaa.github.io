@@ -1,79 +1,107 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เว็บไซต์สุดเทพของคุณ</title>
-    <!-- ลิงก์ไปยังไฟล์ CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- ลิงก์ไปยัง Font Awesome สำหรับไอคอน -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    /* กำหนดพื้นหลังและสี */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #FFEB3B; /* สีเหลืองสดใส */
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: #FF4081; /* สีชมพูสดใส */
+      font-size: 3em;
+    }
+
+    .start-button {
+      background-color: #4CAF50; /* สีเขียวสด */
+      color: white;
+      font-size: 1.5em;
+      padding: 15px 30px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .start-button:hover {
+      background-color: #45a049; /* สีเขียวเข้มขึ้นเมื่อ hover */
+    }
+
+    .content {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .birthday-message {
+      background-color: #FF4081; /* สีชมพู */
+      color: white;
+      font-size: 2em;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    /* ใช้สำหรับการแสดง animation */
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
-    <!-- เมนูนำทาง -->
-    <nav>
-        <div class="logo">โลโก้ของคุณ</div>
-        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-        <ul>
-            <li><a href="#home">หน้าแรก</a></li>
-            <li><a href="#about">เกี่ยวกับเรา</a></li>
-            <li><a href="#services">บริการ</a></li>
-            <li><a href="#contact">ติดต่อเรา</a></li>
-        </ul>
-    </nav>
+  <!-- หน้าจอเริ่มต้น -->
+  <h1>ยินดีต้อนรับ!</h1>
+  <p>กดปุ่ม "เริ่ม" เพื่อไปยังเว็บไซต์</p>
+  <button class="start-button" onclick="startWebsite()">เริ่ม</button>
 
-    <!-- ส่วนแบนเนอร์ -->
-    <section id="home" class="banner">
-        <div class="banner-text">
-            <h1>ยินดีต้อนรับสู่เว็บไซต์ของเรา</h1>
-            <p>เว็บไซต์ที่ออกแบบมาอย่างดีเยี่ยมเพื่อคุณ</p>
-            <a href="#about" class="btn">เรียนรู้เพิ่มเติม</a>
+  <!-- เนื้อหาหลังจากกดปุ่ม -->
+  <div class="content" id="birthdayContent">
+    <div class="birthday-message fade-in">
+      <p>สุขสันต์วันเกิด!</p>
+      <p>ขอให้มีความสุขมากๆ ในวันพิเศษนี้!</p>
+    </div>
+  </div>
+
+  <script>
+    function startWebsite() {
+      // ซ่อนหน้าจอเริ่มต้น
+      document.body.innerHTML = ''; 
+
+      // แสดงเนื้อหาหลังจากกดปุ่ม
+      let content = document.createElement('div');
+      content.classList.add('content');
+      content.innerHTML = `
+        <div class="birthday-message fade-in">
+          <p>สุขสันต์วันเกิด!</p>
+          <p>ขอให้มีความสุขมากๆ ในวันพิเศษนี้!</p>
         </div>
-    </section>
+      `;
+      document.body.appendChild(content);
+    }
+  </script>
 
-    <!-- ส่วนเกี่ยวกับเรา -->
-    <section id="about" class="about">
-        <h2>เกี่ยวกับเรา</h2>
-        <p>นี่คือส่วนที่คุณสามารถใส่ข้อมูลเกี่ยวกับบริษัทหรือองค์กรของคุณ</p>
-    </section>
-
-    <!-- ส่วนบริการ -->
-    <section id="services" class="services">
-        <h2>บริการของเรา</h2>
-        <div class="service-container">
-            <div class="service-box">
-                <i class="fas fa-cogs"></i>
-                <h3>บริการที่ 1</h3>
-                <p>รายละเอียดเกี่ยวกับบริการนี้</p>
-            </div>
-            <div class="service-box">
-                <i class="fas fa-lightbulb"></i>
-                <h3>บริการที่ 2</h3>
-                <p>รายละเอียดเกี่ยวกับบริการนี้</p>
-            </div>
-            <div class="service-box">
-                <i class="fas fa-heart"></i>
-                <h3>บริการที่ 3</h3>
-                <p>รายละเอียดเกี่ยวกับบริการนี้</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ส่วนติดต่อเรา -->
-    <section id="contact" class="contact">
-        <h2>ติดต่อเรา</h2>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="ชื่อของคุณ" required>
-            <input type="email" name="email" placeholder="อีเมลของคุณ" required>
-            <textarea name="message" placeholder="ข้อความของคุณ" required></textarea>
-            <button type="submit">ส่งข้อความ</button>
-        </form>
-    </section>
-
-    <!-- ส่วนท้ายเว็บไซต์ -->
-    <footer>
-        <p>© 2023 เว็บไซต์ของคุณ - สงวนลิขสิทธิ์</p>
-        <div class="social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab 
+</body>
+</html>
