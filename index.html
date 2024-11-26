@@ -3,21 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เว็บไซต์ของฉัน</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-    </style>
+    <title>เว็บไซต์สุดเทพของคุณ</title>
+    <!-- ลิงก์ไปยังไฟล์ CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- ลิงก์ไปยัง Font Awesome สำหรับไอคอน -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>ยินดีต้อนรับสู่เว็บไซต์ของฉัน!</h1>
-    <p>นี่คือเว็บไซต์ที่โฮสต์ด้วย GitHub Pages</p>
-</body>
-</html>
+
+    <!-- เมนูนำทาง -->
+    <nav>
+        <div class="logo">โลโก้ของคุณ</div>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <ul>
+            <li><a href="#home">หน้าแรก</a></li>
+            <li><a href="#about">เกี่ยวกับเรา</a></li>
+            <li><a href="#services">บริการ</a></li>
+            <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+
+    <!-- ส่วนแบนเนอร์ -->
+    <section id="home" class="banner">
+        <div class="banner-text">
+            <h1>ยินดีต้อนรับสู่เว็บไซต์ของเรา</h1>
+            <p>เว็บไซต์ที่ออกแบบมาอย่างดีเยี่ยมเพื่อคุณ</p>
+            <a href="#about" class="btn">เรียนรู้เพิ่มเติม</a>
+        </div>
+    </section>
+
+    <!-- ส่วนเกี่ยวกับเรา -->
+    <section id="about" class="about">
+        <h2>เกี่ยวกับเรา</h2>
+        <p>นี่คือส่วนที่คุณสามารถใส่ข้อมูลเกี่ยวกับบริษัทหรือองค์กรของคุณ</p>
+    </section>
+
+    <!-- ส่วนบริการ -->
+    <section id="services" class="services">
+        <h2>บริการของเรา</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <i class="fas fa-cogs"></i>
+                <h3>บริการที่ 1</h3>
+                <p>รายละเอียดเกี่ยวกับบริการนี้</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-lightbulb"></i>
+                <h3>บริการที่ 2</h3>
+                <p>รายละเอียดเกี่ยวกับบริการนี้</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-heart"></i>
+                <h3>บริการที่ 3</h3>
+                <p>รายละเอียดเกี่ยวกับบริการนี้</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนติดต่อเรา -->
+    <section id="contact" class="contact">
+        <h2>ติดต่อเรา</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="ชื่อของคุณ" required>
+            <input type="email" name="email" placeholder="อีเมลของคุณ" required>
+            <textarea name="message" placeholder="ข้อความของคุณ" required></textarea>
+            <button type="submit">ส่งข้อความ</button>
+        </form>
+    </section>
+
+    <!-- ส่วนท้ายเว็บไซต์ -->
+    <footer>
+        <p>© 2023 เว็บไซต์ของคุณ - สงวนลิขสิทธิ์</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab 
